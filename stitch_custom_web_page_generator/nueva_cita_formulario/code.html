@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#00468d",
+          "on-error-container": "#93000a",
+          "on-primary-container": "#dee7ff",
+          "warning": "#B54708",
+          "surface-dim": "#ccdafc",
+          "on-tertiary-container": "#dde7ff",
+          "on-tertiary": "#ffffff",
+          "on-secondary-fixed": "#001b3d",
+          "error-container": "#ffdad6",
+          "background": "#f4f6fa",
+          "on-primary-fixed": "#001b3e",
+          "primary-fixed": "#d6e3ff",
+          "surface-tint-light": "#F4F6FA",
+          "on-primary": "#ffffff",
+          "on-surface": "#001233",
+          "primary-container": "#0466c8",
+          "danger": "#D92D20",
+          "on-secondary": "#ffffff",
+          "secondary": "#325e9f",
+          "error": "#ba1a1a",
+          "surface-tint-container": "#EBF0F8",
+          "inverse-surface": "#22304a",
+          "tertiary-container": "#4b6898",
+          "on-secondary-fixed-variant": "#134685",
+          "primary-fixed-dim": "#aac7ff",
+          "outline": "#7D8597",
+          "border-light": "#979DAC",
+          "border-slate": "#E2E8F0",
+          "on-background": "#001233",
+          "inverse-on-surface": "#ecf0ff",
+          "primary": "#0466c8",
+          "surface-tint": "#005db8",
+          "surface-container": "#e8eeff",
+          "tertiary": "#32507f",
+          "outline-variant": "#979dac",
+          "tertiary-fixed-dim": "#aac7fd",
+          "neutral-muted": "#5C677D",
+          "darkest-slate": "#001233",
+          "border-muted": "#7D8597",
+          "surface-container-highest": "#d7e2ff",
+          "tertiary-fixed": "#d6e3ff",
+          "on-secondary-container": "#144786",
+          "surface-container-high": "#e0e8ff",
+          "midnight-navy": "#001845",
+          "navy-deep": "#002855",
+          "slate-label": "#33415c",
+          "on-error": "#ffffff",
+          "surface": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "secondary-fixed-dim": "#a9c7ff",
+          "on-tertiary-fixed": "#001b3d",
+          "secondary-container": "#8eb7fe",
+          "surface-bright": "#f9f9ff",
+          "brand-blue-hover": "#0353a4",
+          "brand-blue-active": "#023e7d",
+          "surface-container-low": "#f1f3ff",
+          "inverse-primary": "#aac7ff",
+          "success": "#0F9D58",
+          "on-tertiary-fixed-variant": "#284775",
+          "secondary-fixed": "#d6e3ff",
+          "surface-variant": "#d7e2ff",
+          "on-surface-variant": "#5C677D"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "0.75rem",
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "margin": "1.5rem",
+          "margin-mobile": "1rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "caption": ["Roboto Flex"],
+          "body-default": ["Roboto Flex"],
+          "title-section": ["Roboto Flex"],
+          "headline-page-mobile": ["Roboto Flex"],
+          "body-medium": ["Roboto Flex"],
+          "table-header": ["Roboto Flex"],
+          "code-id": ["monospace"],
+          "title-modal": ["Roboto Flex"],
+          "badge-label": ["Roboto Flex"],
+          "title-card": ["Roboto Flex"],
+          "headline-page": ["Roboto Flex"],
+          "headline-hero": ["Roboto Flex"],
+          "brand-title": ["Roboto Flex"]
+        },
+        "fontSize": {
+          "caption": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+          "body-default": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+          "title-section": ["15px", {"lineHeight": "20px", "fontWeight": "600"}],
+          "headline-page-mobile": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "body-medium": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+          "table-header": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+          "code-id": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+          "title-modal": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+          "badge-label": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "title-card": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-page": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "headline-hero": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "brand-title": ["15px", {"lineHeight": "20px", "fontWeight": "600"}]
+        }
+      },
+    },
+  }
+</script></head><body class="bg-background font-body-default text-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface border-r border-[#E2E8F0] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 flex items-center gap-3 px-space-lg border-b border-[#E2E8F0]"><img alt="Sistema Clinicas Logo" class="h-8 w-auto object-contain rounded" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/><span class="font-brand-title text-brand-title text-midnight-navy font-semibold">Sistema Clinicas</span></div><nav class="flex flex-col gap-6 py-space-lg" data-active-classes="bg-[#ebf3fc] text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]"><div class="flex flex-col gap-1"><span class="px-space-lg font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider mb-space-xs">Principal</span><a class="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" data-path="resumen" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-default text-body-default">Resumen</span></a><a class="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" data-path="citas" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span class="font-body-default text-body-default">Citas</span></a><a aria-current="page" class="flex items-center gap-3 px-space-lg py-2.5 transition-colors bg-[#ebf3fc] text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]" data-path="nueva-cita" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-default text-body-default">Nueva cita</span></a></div><div class="flex flex-col gap-1"><span class="px-space-lg font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider mb-space-xs">Gestión</span><a class="flex items-center justify-between px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" data-path="usuarios" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-default text-body-default">Usuarios</span></div><span class="px-2 py-0.5 rounded-full bg-[#e8eeff] font-badge-label text-badge-label text-slate-label">12</span></a><a class="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-default text-body-default">Configuración</span></a></div><div class="flex flex-col gap-1"><span class="px-space-lg font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider mb-space-xs">Cuenta</span><a class="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" data-path="mi-perfil" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-body-default text-body-default">Mi perfil</span></a></div></nav></div><div class="p-space-md border-t border-[#E2E8F0] flex flex-col gap-3"><div class="bg-[#f4f6fa] rounded-lg border border-[#E2E8F0] p-3 flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-body-medium text-body-medium text-midnight-navy">Operador</span><span class="px-2 py-0.5 rounded-full bg-[#ebf3fc] font-badge-label text-badge-label text-[#0466c8] font-semibold">ADMIN</span></div><span class="font-code-id text-code-id text-neutral-muted truncate">admin@clinicas.com</span></div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-danger hover:bg-error-container hover:text-on-error-container transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-medium text-body-medium">Cerrar sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface border-b border-[#E2E8F0] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-4"><img alt="Sistema Clinicas Logo" class="h-8 w-auto object-contain md:hidden" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/></div><div class="flex items-center gap-4"><div class="relative w-[280px]"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-neutral-muted">search</span><input class="w-full h-10 pl-9 pr-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-midnight-navy placeholder:text-neutral-muted focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 transition-colors" placeholder="Buscar paciente o médico..." type="text"/></div><button aria-label="Notificaciones" class="relative p-2 rounded-lg text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#0466c8]"></span></button><div class="h-6 w-px bg-[#E2E8F0]"></div><div class="flex items-center gap-3 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2kgAIbiYdtWPvyoHHOJHl20AVVTXIsietzZzQ53xt6My-CqNpySok17eeHP21X-ySSWl3mDV_Jn0nCNRxePc81AtpGdwOVfg-bRBy1n5fLIaoK2nQOAfHIuc3O9zE76RC1VNvyRpWRQjOb2ws1RpG837P8sozSCP2hkDauBU9rzRn4QEmoMXg9V9okgZMO23UFz4h_B8B5XJQ-MTVk3F8vqa9hs1JURWhUjeMV0Xa_8ErakVt_OHdkg"/><div class="hidden sm:flex flex-col text-left"><span class="font-body-medium text-body-medium text-midnight-navy leading-tight">Dra. Lucía Valenzuela</span><span class="font-caption text-caption text-neutral-muted leading-tight">Administradora</span></div><span class="material-symbols-outlined text-neutral-muted text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 min-h-screen bg-background"><div class="max-w-[1280px] mx-auto p-space-lg"><div class="flex flex-col w-full">
+<!-- Encabezado de Página & Breadcrumb -->
+<div class="flex flex-col gap-2 mb-space-lg">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-neutral-muted font-body-default text-body-default">
+<a class="hover:text-midnight-navy transition-colors flex items-center gap-1" data-path="citas" href="#">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Citas</span>
+</a>
+<span class="text-border-light">/</span>
+<span class="text-midnight-navy font-body-medium">Nueva cita</span>
+</nav>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div>
+<h1 class="font-headline-page text-headline-page text-midnight-navy">Nueva cita médica</h1>
+<p class="font-body-default text-body-default text-neutral-muted mt-0.5">Programa una nueva consulta para un paciente</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ebf3fc] text-[#0466c8] font-caption text-caption font-medium border border-[#0466c8]/15">
+<span class="w-2 h-2 rounded-full bg-[#0466c8] animate-pulse"></span>
+          Sistema de Citas en Línea
+        </span>
+</div>
+</div>
+</div>
+<!-- Layout Principal: 2 Columnas (8 / 4) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Columna Izquierda: Formulario (8 columnas) -->
+<section class="lg:col-span-8 bg-surface rounded-xl border border-[#E2E8F0] p-7 flex flex-col shadow-none">
+<header class="flex flex-col gap-1 pb-space-md border-b border-[#E2E8F0] mb-6">
+<div class="flex items-center justify-between">
+<h2 class="font-title-modal text-title-modal text-darkest-slate flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0466c8] text-[22px]">medical_services</span>
+            Datos de la consulta
+          </h2>
+<span class="font-caption text-caption text-neutral-muted">* Campos obligatorios</span>
+</div>
+<p class="font-body-default text-body-default text-neutral-muted">
+          Ingresa la información clínica, agenda y profesional asignado para registrar el turno.
+        </p>
+</header>
+<form class="flex flex-col gap-5" id="appointmentForm" onsubmit="event.preventDefault();">
+<!-- Fila 1: Médico & Paciente -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-medium text-body-medium text-slate-label flex items-center gap-1" for="doctorSelect">
+              Médico tratante <span class="text-danger">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">stethoscope</span>
+<select class="w-full h-10 pl-10 pr-9 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 appearance-none cursor-pointer transition-colors" id="doctorSelect">
+<option selected="" value="dr-roberto">Dr. Roberto Sánchez — Cardiología</option>
+<option value="dra-elena">Dra. Elena Gómez — Pediatría</option>
+<option value="dr-marcos">Dr. Marcos Véliz — Medicina General</option>
+<option value="dra-carla">Dra. Carla Méndez — Dermatología</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">unfold_more</span>
+</div>
+<span class="font-caption text-caption text-neutral-muted">Pabellón Central · Consultorio 204</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-body-medium text-body-medium text-slate-label flex items-center gap-1" for="patientInput">
+              Paciente <span class="text-danger">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">person_search</span>
+<input class="w-full h-10 pl-10 pr-9 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate placeholder:text-neutral-muted focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 transition-colors" id="patientInput" placeholder="Buscar por RUT, Nombre o ID..." type="text" value="Camila Torres — ID: PAC-8921"/>
+<button aria-label="Limpiar o buscar paciente" class="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-muted hover:text-midnight-navy" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_search</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-success flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Expediente activo
+              </span>
+<span class="text-border-light font-caption text-caption">·</span>
+<span class="font-caption text-caption text-neutral-muted">Último control: 12 Ene 2026</span>
+</div>
+</div>
+</div>
+<!-- Fila 2: Fecha y Hora -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-medium text-body-medium text-slate-label flex items-center gap-1" for="appointmentDate">
+              Fecha de la consulta <span class="text-danger">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">calendar_month</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 cursor-pointer transition-colors" id="appointmentDate" type="date" value="2026-03-20"/>
+</div>
+<span class="font-caption text-caption text-neutral-muted">Horario de atención: 08:30 a 19:00 hrs</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-body-medium text-body-medium text-slate-label flex items-center gap-1" for="appointmentTime">
+              Hora <span class="text-danger">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">schedule</span>
+<select class="w-full h-10 pl-10 pr-9 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 appearance-none cursor-pointer transition-colors" id="appointmentTime">
+<option value="09:00">09:00 hrs</option>
+<option value="09:45">09:45 hrs</option>
+<option selected="" value="10:30">10:30 hrs (Disponible)</option>
+<option value="11:15">11:15 hrs</option>
+<option value="12:00">12:00 hrs</option>
+<option value="15:30">15:30 hrs</option>
+<option value="16:15">16:15 hrs</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">arrow_drop_down</span>
+</div>
+<span class="font-caption text-caption text-neutral-muted">Duración estándar: 30-45 minutos</span>
+</div>
+</div>
+<!-- Fila 3: Tipo de consulta -->
+<div class="flex flex-col gap-1.5">
+<label class="font-body-medium text-body-medium text-slate-label flex items-center gap-1" for="consultationType">
+            Tipo de consulta <span class="text-danger">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">clinical_notes</span>
+<select class="w-full h-10 pl-10 pr-9 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 appearance-none cursor-pointer transition-colors" id="consultationType">
+<option selected="" value="general">Consulta general</option>
+<option value="control">Control de seguimiento</option>
+<option value="vacunacion">Vacunación e inmunización</option>
+<option value="procedimiento">Procedimiento ambulatorio / Electrocardiograma</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Fila 4: Motivo de la consulta con contador -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-medium text-body-medium text-slate-label" for="consultationReason">
+              Motivo de la consulta
+            </label>
+<span class="font-caption text-caption text-neutral-muted">Opcional</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate placeholder:text-neutral-muted focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 resize-none transition-colors" id="consultationReason" maxlength="500" placeholder="Describe brevemente los síntomas o razón del control médico..." rows="4">Revisión periódica de arritmia benigna diagnosticada en control de enero. Evaluación de electrocardiograma reciente.</textarea>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-caption text-caption text-neutral-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">info</span> Incluye indicaciones previas si aplica
+            </span>
+<span class="font-code-id text-code-id text-neutral-muted" id="charCounter">48 / 500</span>
+</div>
+</div>
+<!-- Preferencias Rápidas de Notificación -->
+<div class="p-3.5 bg-[#f4f6fa] rounded-lg border border-[#E2E8F0] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#0466c8] text-[20px]">mark_email_read</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-darkest-slate">Notificaciones por SMS &amp; Correo</span>
+<span class="font-caption text-caption text-neutral-muted">Enviar recordatorio 24 horas antes de la cita</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-[#979dac] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface after:border-border-muted after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#0466c8]"></div>
+</label>
+</div>
+<!-- Card Footer -->
+<div class="pt-5 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-2">
+<div class="flex items-center gap-2 text-neutral-muted">
+<span class="material-symbols-outlined text-[18px] text-[#0466c8]">forward_to_inbox</span>
+<span class="font-caption text-caption">Se enviará confirmación automática por correo al paciente.</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="px-4 h-10 rounded-lg border border-[#7D8597]/40 bg-surface font-body-medium text-body-medium text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors" type="button">
+              Cancelar
+            </button>
+<button class="px-5 h-10 rounded-lg bg-[#0466c8] text-on-primary font-body-medium text-body-medium hover:bg-[#0353a4] active:bg-[#023e7d] transition-all flex items-center gap-2 shadow-sm" id="btnSubmitAppointment" type="button">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+<span>Agendar cita</span>
+</button>
+</div>
+</div>
+</form>
+</section>
+<!-- Columna Derecha: Sticky Summary Card (4 columnas) -->
+<aside class="lg:col-span-4 sticky top-20 flex flex-col gap-4">
+<div class="bg-[#ebf3fc] rounded-xl p-6 flex flex-col relative overflow-hidden border border-[#0466c8]/15">
+<!-- Badge de encabezado resumen -->
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-[#0466c8] shadow-xs">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<h3 class="font-title-section text-title-section text-midnight-navy font-semibold">Resumen de la cita</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#FEF3F2] text-warning border border-[rgba(181,71,8,0.2)] font-badge-label text-badge-label font-medium">
+            Agendada
+          </span>
+</div>
+<p class="font-caption text-caption text-neutral-muted mb-5">
+          Comprueba la concordancia de los datos antes de emitir la orden médica de atención.
+        </p>
+<!-- Definition List Parametrizada -->
+<div class="flex flex-col gap-3.5 bg-surface/90 rounded-lg p-4 border border-[#0466c8]/15 shadow-sm">
+<!-- Médico -->
+<div class="flex flex-col gap-0.5">
+<span class="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Médico</span>
+<div class="flex items-start gap-2 mt-0.5">
+<span class="material-symbols-outlined text-[#0466c8] text-[18px] mt-0.5">person</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-midnight-navy font-semibold" id="summaryDoctorName">Dr. Roberto Sánchez</span>
+<span class="font-caption text-caption text-neutral-muted" id="summaryDoctorDept">Cardiología · Consultorio 204</span>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-[#E2E8F0]"></div>
+<!-- Paciente -->
+<div class="flex flex-col gap-0.5">
+<span class="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Paciente</span>
+<div class="flex items-start gap-2 mt-0.5">
+<span class="material-symbols-outlined text-[#0466c8] text-[18px] mt-0.5">badge</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-midnight-navy font-semibold" id="summaryPatientName">Camila Torres</span>
+<span class="font-code-id text-code-id text-neutral-muted">ID: PAC-8921 · Tel: +56 9 8765 4321</span>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-[#E2E8F0]"></div>
+<!-- Fecha y Hora -->
+<div class="flex flex-col gap-0.5">
+<span class="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Fecha y Hora</span>
+<div class="flex items-start gap-2 mt-0.5">
+<span class="material-symbols-outlined text-[#0466c8] text-[18px] mt-0.5">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-midnight-navy font-semibold" id="summaryDateTime">Jueves, 20 de marzo de 2026</span>
+<span class="font-caption text-caption text-[#0466c8] font-medium">10:30 hrs (Hora estándar)</span>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-[#E2E8F0]"></div>
+<!-- Tipo -->
+<div class="flex flex-col gap-0.5">
+<span class="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Tipo de Atención</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="material-symbols-outlined text-[#0466c8] text-[18px]">assignment_turned_in</span>
+<span class="font-body-medium text-body-medium text-midnight-navy font-medium" id="summaryType">Consulta general</span>
+</div>
+</div>
+<div class="w-full h-px bg-[#E2E8F0]"></div>
+<!-- Estado Inicial -->
+<div class="flex items-center justify-between pt-0.5">
+<span class="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Estado Inicial</span>
+<span class="px-2 py-0.5 rounded-full bg-[#FEF3F2] text-warning border border-[rgba(181,71,8,0.2)] font-badge-label text-badge-label font-medium">
+              Agendada
+            </span>
+</div>
+</div>
+<!-- Information Notice Box -->
+<div class="mt-4 p-3.5 bg-surface/90 rounded-lg border border-[#0466c8]/15 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#0466c8] text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-caption text-caption text-slate-label leading-relaxed">
+            Podrás reprogramar o cancelar esta cita en cualquier momento desde el listado general de citas.
+          </p>
+</div>
+<!-- Acceso directo a historial -->
+<div class="mt-3 flex items-center justify-between px-1">
+<span class="font-code-id text-code-id text-neutral-muted">FOLIO PREVIO: #CT-2026-081</span>
+<a class="font-caption text-caption text-[#0466c8] hover:text-[#0353a4] hover:underline flex items-center gap-1 font-medium" href="#">
+            Ver historial
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Quick Doctor Availability Indicator Card -->
+<div class="bg-surface rounded-xl border border-[#E2E8F0] p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-[#ebf3fc] flex items-center justify-center text-[#0466c8]">
+<span class="material-symbols-outlined text-[20px]">av_timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-midnight-navy font-medium">Citas del Dr. Sánchez hoy</span>
+<span class="font-caption text-caption text-neutral-muted">5 completadas · 3 pendientes</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-[#f4f6fa] text-midnight-navy font-code-id text-code-id border border-[#7D8597]/30">
+          Sala 204
+        </span>
+</div>
+</aside>
+</div>
+<!-- Toast de Confirmación Simulado -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 transition-opacity duration-300 opacity-0 pointer-events-none z-50" id="toastNotification">
+<span class="material-symbols-outlined text-success text-[20px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium leading-tight">Cita registrada exitosamente</span>
+<span class="font-caption text-caption text-slate-300">Se enviaron los accesos de confirmación al paciente</span>
+</div>
+<button class="ml-2 text-slate-400 hover:text-surface" onclick="hideToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  (function initAppointmentForm() {
+    const reasonTextarea = document.getElementById('consultationReason');
+    const charCounter = document.getElementById('charCounter');
+    const doctorSelect = document.getElementById('doctorSelect');
+    const patientInput = document.getElementById('patientInput');
+    const appointmentDate = document.getElementById('appointmentDate');
+    const appointmentTime = document.getElementById('appointmentTime');
+    const consultationType = document.getElementById('consultationType');
+    
+    // Elementos del resumen
+    const summaryDoctorName = document.getElementById('summaryDoctorName');
+    const summaryDoctorDept = document.getElementById('summaryDoctorDept');
+    const summaryPatientName = document.getElementById('summaryPatientName');
+    const summaryDateTime = document.getElementById('summaryDateTime');
+    const summaryType = document.getElementById('summaryType');
+    const btnSubmit = document.getElementById('btnSubmitAppointment');
+    const toast = document.getElementById('toastNotification');
+
+    // Contador de caracteres en tiempo real
+    if (reasonTextarea && charCounter) {
+      const updateCount = () => {
+        const count = reasonTextarea.value.length;
+        charCounter.textContent = `${count} / 500`;
+      };
+      reasonTextarea.addEventListener('input', updateCount);
+      updateCount();
+    }
+
+    // Actualización reactiva del médico en el resumen
+    if (doctorSelect && summaryDoctorName && summaryDoctorDept) {
+      doctorSelect.addEventListener('change', (e) => {
+        const selectedText = e.target.options[e.target.selectedIndex].text;
+        const [doc, dept] = selectedText.split('—');
+        summaryDoctorName.textContent = doc ? doc.trim() : selectedText;
+        summaryDoctorDept.textContent = dept ? `${dept.trim()} · Consultorio asignado` : 'Consulta médica';
+      });
+    }
+
+    // Actualización de fecha y hora
+    function updateDateTimeSummary() {
+      if (!appointmentDate || !appointmentTime || !summaryDateTime) return;
+      const dateVal = appointmentDate.value;
+      const timeVal = appointmentTime.value;
+      if (dateVal) {
+        const parts = dateVal.split('-');
+        if (parts.length === 3) {
+          const d = new Date(parts[0], parts[1] - 1, parts[2]);
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          const formattedDate = d.toLocaleDateString('es-ES', options);
+          const capitalized = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
+          summaryDateTime.textContent = `${capitalized} a las ${timeVal} hrs`;
+          return;
+        }
+      }
+      summaryDateTime.textContent = `${dateVal} a las ${timeVal} hrs`;
+    }
+
+    if (appointmentDate) appointmentDate.addEventListener('change', updateDateTimeSummary);
+    if (appointmentTime) appointmentTime.addEventListener('change', updateDateTimeSummary);
+
+    // Actualización de tipo de consulta
+    if (consultationType && summaryType) {
+      consultationType.addEventListener('change', (e) => {
+        summaryType.textContent = e.target.options[e.target.selectedIndex].text;
+      });
+    }
+
+    // Actualización nombre de paciente
+    if (patientInput && summaryPatientName) {
+      patientInput.addEventListener('input', (e) => {
+        const val = e.target.value.trim();
+        const mainName = val.split('—')[0];
+        summaryPatientName.textContent = mainName.trim() || 'Paciente sin asignar';
+      });
+    }
+
+    // Micro-interacción: Guardado exitoso
+    if (btnSubmit && toast) {
+      btnSubmit.addEventListener('click', () => {
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Guardando...</span>`;
+        setTimeout(() => {
+          btnSubmit.disabled = false;
+          btnSubmit.innerHTML = `<span class="material-symbols-outlined text-[20px]">event_available</span><span>Agendar cita</span>`;
+          toast.classList.remove('opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            hideToast();
+          }, 4500);
+        }, 750);
+      });
+    }
+  })();
+
+  function hideToast() {
+    const toast = document.getElementById('toastNotification');
+    if (toast) {
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }
+  }
+</script></div></main></div></body></html>

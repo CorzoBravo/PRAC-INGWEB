@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#00468d",
+          "on-error-container": "#93000a",
+          "on-primary-container": "#dee7ff",
+          "warning": "#B54708",
+          "surface-dim": "#ccdafc",
+          "on-tertiary-container": "#dde7ff",
+          "on-tertiary": "#ffffff",
+          "on-secondary-fixed": "#001b3d",
+          "error-container": "#ffdad6",
+          "background": "#f9f9ff",
+          "on-primary-fixed": "#001b3e",
+          "primary-fixed": "#d6e3ff",
+          "surface-tint-light": "#F4F6FA",
+          "on-primary": "#ffffff",
+          "on-surface": "#001233",
+          "primary-container": "#0466c8",
+          "danger": "#D92D20",
+          "on-secondary": "#ffffff",
+          "secondary": "#325e9f",
+          "error": "#ba1a1a",
+          "surface-tint-container": "#EBF0F8",
+          "inverse-surface": "#22304a",
+          "tertiary-container": "#4b6898",
+          "on-secondary-fixed-variant": "#134685",
+          "primary-fixed-dim": "#aac7ff",
+          "outline": "#7D8597",
+          "border-light": "#979DAC",
+          "on-background": "#001233",
+          "inverse-on-surface": "#ecf0ff",
+          "primary": "#0466c8",
+          "surface-tint": "#005db8",
+          "surface-container": "#e8eeff",
+          "tertiary": "#32507f",
+          "outline-variant": "#c1c6d5",
+          "tertiary-fixed-dim": "#aac7fd",
+          "neutral-muted": "#5C677D",
+          "darkest-slate": "#001233",
+          "border-muted": "#7D8597",
+          "surface-container-highest": "#d7e2ff",
+          "tertiary-fixed": "#d6e3ff",
+          "on-secondary-container": "#144786",
+          "surface-container-high": "#e0e8ff",
+          "midnight-navy": "#001845",
+          "on-error": "#ffffff",
+          "surface": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "secondary-fixed-dim": "#a9c7ff",
+          "on-tertiary-fixed": "#001b3d",
+          "secondary-container": "#8eb7fe",
+          "surface-bright": "#f9f9ff",
+          "brand-blue-hover": "#0353A4",
+          "brand-blue-active": "#023E7D",
+          "surface-container-low": "#f1f3ff",
+          "inverse-primary": "#aac7ff",
+          "success": "#0F9D58",
+          "on-tertiary-fixed-variant": "#284775",
+          "secondary-fixed": "#d6e3ff",
+          "surface-variant": "#d7e2ff",
+          "on-surface-variant": "#33415c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "0.75rem",
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "margin": "1.5rem",
+          "margin-mobile": "1rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "caption": [
+            "Roboto Flex"
+          ],
+          "body-default": [
+            "Roboto Flex"
+          ],
+          "title-section": [
+            "Roboto Flex"
+          ],
+          "headline-page-mobile": [
+            "Roboto Flex"
+          ],
+          "body-medium": [
+            "Roboto Flex"
+          ],
+          "table-header": [
+            "Roboto Flex"
+          ],
+          "code-id": [
+            "monospace"
+          ],
+          "title-modal": [
+            "Roboto Flex"
+          ],
+          "badge-label": [
+            "Roboto Flex"
+          ],
+          "title-card": [
+            "Roboto Flex"
+          ],
+          "headline-page": [
+            "Roboto Flex"
+          ],
+          "headline-hero": [
+            "Roboto Flex"
+          ]
+        },
+        "fontSize": {
+          "caption": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-default": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "title-section": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-page-mobile": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-medium": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "500"
+            }
+          ],
+          "table-header": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "600"
+            }
+          ],
+          "code-id": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "title-modal": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "badge-label": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-card": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-page": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-hero": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }
+</script></head><body class="bg-surface-tint-light font-body-default text-body-default text-darkest-slate antialiased"><main class="min-h-screen w-full flex items-center justify-center p-space-lg"><div class="flex flex-col w-full items-center justify-center py-6 px-4">
+<div class="w-full max-w-[980px] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<div class="lg:col-span-5 flex flex-col justify-center space-y-7 pr-0 lg:pr-4">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+<img alt="Sistema Clinicas Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/>
+</div>
+<span class="font-title-modal text-title-modal text-midnight-navy font-semibold tracking-tight">Sistema Clínicas</span>
+</div>
+<div class="space-y-3">
+<h1 class="font-headline-hero text-headline-hero text-midnight-navy tracking-tight font-semibold">
+          Gestión integral de citas y pacientes
+        </h1>
+<p class="font-body-default text-body-default text-neutral-muted leading-relaxed">
+          Agenda, gestiona y da seguimiento a las consultas de tu clínica en una plataforma médica unificada.
+        </p>
+</div>
+<div class="space-y-4 pt-1">
+<div class="flex items-start space-x-3.5">
+<div class="w-8 h-8 rounded-lg bg-surface-tint-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">calendar_clock</span>
+</div>
+<div class="pt-0.5">
+<p class="font-body-medium text-body-medium text-midnight-navy">Agenda y seguimiento de consultas</p>
+<p class="font-caption text-caption text-neutral-muted">Monitoreo y actualización continua en tiempo real.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3.5">
+<div class="w-8 h-8 rounded-lg bg-surface-tint-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">clinical_notes</span>
+</div>
+<div class="pt-0.5">
+<p class="font-body-medium text-body-medium text-midnight-navy">Historial clínico y registro</p>
+<p class="font-caption text-caption text-neutral-muted">Expediente digital seguro para cada paciente.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3.5">
+<div class="w-8 h-8 rounded-lg bg-surface-tint-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+</div>
+<div class="pt-0.5">
+<p class="font-body-medium text-body-medium text-midnight-navy">Control de roles y accesos seguros</p>
+<p class="font-caption text-caption text-neutral-muted">Permisos granulares para personal administrativo y médico.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-2 pt-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-badge-label font-badge-label bg-surface-tint-container text-primary font-semibold border border-surface-container-highest">
+          HIPAA &amp; GDPR COMPLIANT
+        </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-badge-label font-badge-label bg-surface-tint-container text-primary font-semibold border border-surface-container-highest">
+          TLS 1.3 ENCRYPTED
+        </span>
+</div>
+</div>
+<div class="lg:col-span-7 flex justify-center lg:justify-end">
+<div class="w-full max-w-[440px] bg-surface rounded-xl p-8 sm:p-9 shadow-sm border border-outline-variant/50 flex flex-col">
+<div class="space-y-1 mb-7">
+<h2 class="font-headline-page text-headline-page text-midnight-navy font-semibold">Iniciar sesión</h2>
+<p class="font-body-default text-body-default text-neutral-muted">Ingresa tus credenciales para acceder a la plataforma</p>
+</div>
+<form class="space-y-4" id="loginForm" onsubmit="event.preventDefault(); handleLogin();">
+<div class="space-y-1.5">
+<label class="block font-caption text-caption font-medium text-darkest-slate" for="email">
+              Correo electrónico
+            </label>
+<div class="relative rounded-lg bg-surface">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-border-muted">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<input class="w-full h-10 pl-9 pr-3 text-body-default font-body-default rounded-lg bg-surface text-darkest-slate placeholder:text-border-muted border border-border-light/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="email" placeholder="medico@clinica.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block font-caption text-caption font-medium text-darkest-slate" for="password">
+              Contraseña
+            </label>
+<div class="relative rounded-lg bg-surface">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-border-muted">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<input class="w-full h-10 pl-9 pr-10 text-body-default font-body-default rounded-lg bg-surface text-darkest-slate placeholder:text-border-muted border border-border-light/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="password" placeholder="••••••••" required="" type="password"/>
+<button aria-label="Alternar visibilidad de contraseña" class="absolute inset-y-0 right-0 pr-3 flex items-center text-border-muted hover:text-darkest-slate transition-colors focus:outline-none" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="passwordToggleIcon">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center space-x-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary border-border-light/70 focus:ring-0 focus:ring-offset-0 cursor-pointer" id="remember" type="checkbox"/>
+<span class="font-caption text-caption text-neutral-muted">Recordarme</span>
+</label>
+<a class="font-caption text-caption font-medium text-primary hover:text-brand-blue-hover transition-colors" href="#">
+              Olvidé mi contraseña
+            </a>
+</div>
+<div class="pt-2">
+<button class="w-full h-10 rounded-lg bg-primary hover:bg-brand-blue-hover active:bg-brand-blue-active font-body-medium text-body-medium text-on-primary flex items-center justify-center transition-colors shadow-sm font-medium" type="submit">
+              Iniciar sesión
+            </button>
+</div>
+</form>
+<div class="relative my-6 text-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full h-[1px] bg-border-light/40"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="bg-surface px-3 font-caption text-caption text-neutral-muted uppercase">o</span>
+</div>
+</div>
+<div>
+<button class="w-full h-10 rounded-lg bg-surface-container-low hover:bg-surface-container active:bg-surface-container-high border border-outline-variant/60 font-body-medium text-body-medium text-midnight-navy flex items-center justify-center transition-colors" type="button">
+            Crear cuenta de paciente
+          </button>
+</div>
+<div class="mt-6 pt-2">
+<div class="flex items-center justify-center space-x-1.5 text-center">
+<span class="material-symbols-outlined text-[16px] text-border-muted">verified_user</span>
+<p class="font-caption text-caption text-neutral-muted leading-tight">
+              Acceso exclusivo y seguro para personal autorizado y pacientes.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    const input = document.getElementById('password');
+    const icon = document.getElementById('passwordToggleIcon');
+    if (!input || !icon) return;
+    
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function handleLogin() {
+    const email = document.getElementById('email').value;
+    const remember = document.getElementById('remember').checked;
+    const button = document.querySelector('#loginForm button[type="submit"]');
+    
+    if (!button) return;
+    const originalText = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>';
+    
+    setTimeout(() => {
+      button.disabled = false;
+      button.innerHTML = originalText;
+    }, 1200);
+  }
+</script></main></body></html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#00468d",
+          "on-error-container": "#93000a",
+          "on-primary-container": "#dee7ff",
+          "warning": "#B54708",
+          "surface-dim": "#ccdafc",
+          "on-tertiary-container": "#dde7ff",
+          "on-tertiary": "#ffffff",
+          "on-secondary-fixed": "#001b3d",
+          "error-container": "#ffdad6",
+          "background": "#f9f9ff",
+          "on-primary-fixed": "#001b3e",
+          "primary-fixed": "#d6e3ff",
+          "surface-tint-light": "#F4F6FA",
+          "on-primary": "#ffffff",
+          "on-surface": "#0c1b34",
+          "primary-container": "#0466c8",
+          "danger": "#D92D20",
+          "on-secondary": "#ffffff",
+          "secondary": "#325e9f",
+          "error": "#ba1a1a",
+          "surface-tint-container": "#EBF0F8",
+          "inverse-surface": "#22304a",
+          "tertiary-container": "#4b6898",
+          "on-secondary-fixed-variant": "#134685",
+          "primary-fixed-dim": "#aac7ff",
+          "outline": "#727784",
+          "border-light": "#979DAC",
+          "on-background": "#0c1b34",
+          "inverse-on-surface": "#ecf0ff",
+          "primary": "#004e9d",
+          "surface-tint": "#005db8",
+          "surface-container": "#e8eeff",
+          "tertiary": "#32507f",
+          "outline-variant": "#c1c6d5",
+          "tertiary-fixed-dim": "#aac7fd",
+          "neutral-muted": "#5C677D",
+          "darkest-slate": "#001233",
+          "border-muted": "#7D8597",
+          "surface-container-highest": "#d7e2ff",
+          "tertiary-fixed": "#d6e3ff",
+          "on-secondary-container": "#144786",
+          "surface-container-high": "#e0e8ff",
+          "midnight-navy": "#001845",
+          "on-error": "#ffffff",
+          "surface": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "secondary-fixed-dim": "#a9c7ff",
+          "on-tertiary-fixed": "#001b3d",
+          "secondary-container": "#8eb7fe",
+          "surface-bright": "#f9f9ff",
+          "brand-blue-hover": "#0353A4",
+          "surface-container-low": "#f1f3ff",
+          "inverse-primary": "#aac7ff",
+          "success": "#0F9D58",
+          "on-tertiary-fixed-variant": "#284775",
+          "secondary-fixed": "#d6e3ff",
+          "surface-variant": "#d7e2ff",
+          "on-surface-variant": "#414753",
+          "slate-subtle": "#33415c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "0.75rem",
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "margin": "1.5rem",
+          "margin-mobile": "1rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "caption": [
+            "Roboto Flex"
+          ],
+          "body-default": [
+            "Roboto Flex"
+          ],
+          "title-section": [
+            "Roboto Flex"
+          ],
+          "headline-page-mobile": [
+            "Roboto Flex"
+          ],
+          "body-medium": [
+            "Roboto Flex"
+          ],
+          "table-header": [
+            "Roboto Flex"
+          ],
+          "code-id": [
+            "monospace"
+          ],
+          "title-modal": [
+            "Roboto Flex"
+          ],
+          "badge-label": [
+            "Roboto Flex"
+          ],
+          "title-card": [
+            "Roboto Flex"
+          ],
+          "headline-page": [
+            "Roboto Flex"
+          ],
+          "headline-hero": [
+            "Roboto Flex"
+          ]
+        },
+        "fontSize": {
+          "caption": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-default": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "title-section": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-page-mobile": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-medium": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "500"
+            }
+          ],
+          "table-header": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "600"
+            }
+          ],
+          "code-id": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "title-modal": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "badge-label": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-card": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-page": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-hero": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }
+</script></head><body class="bg-[#f4f6fa] font-body-default text-body-default text-[#001233] antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface border-r border-[#979DAC]/30 z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 flex items-center gap-3 px-space-lg border-b border-[#979DAC]/30"><img alt="Sistema Clinicas Logo" class="h-8 w-auto object-contain rounded" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/><span class="font-title-section text-[15px] font-semibold text-[#001845]">Sistema Clinicas</span></div><nav class="flex flex-col gap-6 py-space-lg" data-active-classes="bg-[#0466c8]/10 text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]"><div class="flex flex-col gap-1"><span class="px-space-lg font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider mb-space-xs">Principal</span><a class="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" data-path="resumen" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-default text-body-default">Resumen</span></a><a aria-current="page" class="flex items-center gap-3 px-space-lg py-2.5 transition-colors bg-[#0466c8]/10 text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]" data-path="citas" href="#"><span class="material-symbols-outlined text-[20px] text-[#0466c8]">calendar_today</span><span class="font-body-default text-body-default">Citas</span></a><a class="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" data-path="nueva-cita" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-default text-body-default">Nueva cita</span></a></div><div class="flex flex-col gap-1"><span class="px-space-lg font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider mb-space-xs">Gestión</span><a class="flex items-center justify-between px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" data-path="usuarios" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-default text-body-default">Usuarios</span></div><span class="px-2 py-0.5 rounded-full bg-[#EBF0F8] font-badge-label text-badge-label text-[#33415c]">12</span></a><a class="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-default text-body-default">Configuración</span></a></div><div class="flex flex-col gap-1"><span class="px-space-lg font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider mb-space-xs">Cuenta</span><a class="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" data-path="mi-perfil" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-body-default text-body-default">Mi perfil</span></a></div></nav></div><div class="p-space-md border-t border-[#979DAC]/30 flex flex-col gap-3"><div class="bg-[#F4F6FA] rounded-lg border border-[#979DAC]/30 p-3 flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-body-medium text-body-medium text-[#001845]">Operador</span><span class="px-2 py-0.5 rounded-full bg-[#0466c8]/10 font-badge-label text-badge-label text-[#0466c8]">ADMIN</span></div><span class="font-code-id text-code-id text-[#5C677D] truncate">admin@clinicas.com</span></div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-danger hover:bg-error-container hover:text-on-error-container transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-medium text-body-medium">Cerrar sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface border-b border-[#979DAC]/30 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-4"><img alt="Sistema Clinicas Logo" class="h-8 w-auto object-contain md:hidden" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/></div><div class="flex items-center gap-4"><div class="relative w-[280px]"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-[#5C677D]">search</span><input class="w-full h-10 pl-9 pr-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] placeholder:text-[#5C677D] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20" placeholder="Buscar paciente o médico..." type="text"/></div><button aria-label="Notificaciones" class="relative p-2 rounded-lg text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#0466c8]"></span></button><div class="h-6 w-px bg-[#979DAC]/30"></div><div class="flex items-center gap-3 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2kgAIbiYdtWPvyoHHOJHl20AVVTXIsietzZzQ53xt6My-CqNpySok17eeHP21X-ySSWl3mDV_Jn0nCNRxePc81AtpGdwOVfg-bRBy1n5fLIaoK2nQOAfHIuc3O9zE76RC1VNvyRpWRQjOb2ws1RpG837P8sozSCP2hkDauBU9rzRn4QEmoMXg9V9okgZMO23UFz4h_B8B5XJQ-MTVk3F8vqa9hs1JURWhUjeMV0Xa_8ErakVt_OHdkg"/><div class="hidden sm:flex flex-col text-left"><span class="font-body-medium text-body-medium text-[#001845] leading-tight">Dra. Lucía Valenzuela</span><span class="font-caption text-caption text-[#5C677D] leading-tight">Administradora</span></div><span class="material-symbols-outlined text-[#5C677D] text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 min-h-screen bg-[#f4f6fa]"><div class="max-w-[1280px] mx-auto p-space-lg"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-page text-headline-page text-[#001845]">Citas</h1>
+<p class="font-body-default text-body-default text-[#5C677D]">Gestiona y da seguimiento a las consultas médicas</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-10 px-4 rounded-lg bg-surface border border-[#7D8597]/40 text-[#001845] hover:bg-[#F4F6FA] font-body-medium text-body-medium flex items-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-[#5C677D]">file_download</span>
+<span>Exportar</span>
+</button>
+<button class="h-10 px-4 rounded-lg bg-[#0466c8] hover:bg-[#0353A4] text-white font-body-medium text-body-medium flex items-center gap-2 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Nueva cita</span>
+</button>
+</div>
+</div>
+<div class="bg-surface rounded-xl border border-[#979DAC]/30 p-5 flex flex-col gap-4 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3.5 items-end">
+<div class="lg:col-span-2 flex flex-col gap-1.5">
+<label class="font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider">Estado</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 appearance-none cursor-pointer">
+<option value="todas">Todas</option>
+<option value="agendadas">Agendadas</option>
+<option value="completadas">Completadas</option>
+<option value="canceladas">Canceladas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-[#5C677D] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider">Rango de fechas</label>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative">
+<input class="w-full h-10 pl-8 pr-2 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20" type="text" value="12/03/2026"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-[#5C677D]">calendar_today</span>
+</div>
+<div class="relative">
+<input class="w-full h-10 pl-8 pr-2 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20" type="text" value="19/03/2026"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-[#5C677D]">calendar_today</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider">Médico</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 appearance-none cursor-pointer">
+<option value="todos">Todos los médicos</option>
+<option value="roberto">Dr. Roberto Sánchez (Cardiología)</option>
+<option value="lucia">Dra. Lucía Valenzuela (Med. General)</option>
+<option value="mariana">Dra. Mariana Vega (Pediatría)</option>
+<option value="jorge">Dr. Jorge Ramos (Traumatología)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-[#5C677D] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-1.5">
+<label class="font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider">Búsqueda rápida</label>
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-[#5C677D]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] placeholder:text-[#5C677D] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20" placeholder="Buscar por paciente o ID..." type="text"/>
+</div>
+<button class="h-10 px-3 rounded-lg text-[#0466c8] hover:bg-[#0466c8]/10 font-body-medium text-body-medium flex items-center gap-1 transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#0466c8]">restart_alt</span>
+<span>Limpiar</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-body-default font-body-default">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-[#001845]">24 citas</span>
+<span class="text-[#5C677D]">·</span>
+<span class="text-[#5C677D]">Mostrando semana en curso</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-[#5C677D] text-caption font-caption">
+<span>Filas:</span>
+<div class="relative">
+<select class="h-8 pl-2 pr-6 rounded border border-[#7D8597]/40 bg-surface text-caption font-caption text-[#001233] focus:outline-none focus:border-[#0466c8]">
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+<span class="material-symbols-outlined absolute right-1 top-1/2 -translate-y-1/2 text-[14px] text-[#5C677D] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="h-4 w-px bg-[#979DAC]/30"></div>
+<div class="inline-flex rounded-lg border border-[#7D8597]/30 bg-surface p-0.5">
+<button aria-label="Vista tabla" class="p-1.5 rounded-md bg-[#0466c8]/10 text-[#0466c8]" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button aria-label="Vista cuadrícula" class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button aria-label="Vista calendario" class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-xl border border-[#7D8597]/30 shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-10 bg-[#F4F6FA] border-b border-[#7D8597]/25">
+<th class="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Paciente</th>
+<th class="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Médico</th>
+<th class="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Fecha y Hora</th>
+<th class="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Tipo de Consulta</th>
+<th class="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Estado</th>
+<th class="px-5 text-right font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#979DAC]/20">
+<tr class="h-[52px] hover:bg-[#F4F6FA] transition-colors">
+<td class="px-5 py-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#0466c8]/10 text-[#0466c8] font-body-medium text-[13px] flex items-center justify-center flex-shrink-0 font-semibold">
+                    CT
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-[#001233] leading-snug font-semibold">Camila Torres</span>
+<span class="font-code-id text-code-id text-[#5C677D]">#PAC-8921</span>
+</div>
+</div>
+</td>
+<td class="px-5 py-2">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-[#33415c] leading-snug">Dr. Roberto Sánchez</span>
+<span class="font-caption text-caption text-[#5C677D]">Cardiología</span>
+</div>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="font-body-default text-body-default text-[#001233]">12 mar 2026, 09:00</span>
+</td>
+<td class="px-5 py-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF0F8] text-[#33415c] font-caption text-caption">
+                  Consulta general
+                </span>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 h-6 px-2 rounded-full font-badge-label text-badge-label uppercase tracking-wider bg-[#EDFDF2] text-success border border-[#0F9D58]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+                  Completada
+                </span>
+</td>
+<td class="px-5 py-2 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Ver detalles" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#0466c8] hover:bg-[#EBF0F8] transition-colors" title="Editar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-danger hover:bg-error-container transition-colors" title="Cancelar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="h-[52px] bg-surface hover:bg-[#F4F6FA] transition-colors">
+<td class="px-5 py-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#0466c8]/10 text-[#0466c8] font-body-medium text-[13px] flex items-center justify-center flex-shrink-0 font-semibold">
+                    CM
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-[#001233] leading-snug font-semibold">Carlos Mendoza</span>
+<span class="font-code-id text-code-id text-[#5C677D]">#PAC-4412</span>
+</div>
+</div>
+</td>
+<td class="px-5 py-2">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-[#33415c] leading-snug">Dra. Lucía Valenzuela</span>
+<span class="font-caption text-caption text-[#5C677D]">Medicina General</span>
+</div>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="font-body-default text-body-default text-[#001233]">12 mar 2026, 10:15</span>
+</td>
+<td class="px-5 py-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF0F8] text-[#33415c] font-caption text-caption">
+                  Control
+                </span>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 h-6 px-2 rounded-full font-badge-label text-badge-label uppercase tracking-wider bg-[#EDFDF2] text-success border border-[#0F9D58]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+                  Completada
+                </span>
+</td>
+<td class="px-5 py-2 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Ver detalles" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#0466c8] hover:bg-[#EBF0F8] transition-colors" title="Editar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-danger hover:bg-error-container transition-colors" title="Cancelar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="h-[52px] hover:bg-[#F4F6FA] transition-colors">
+<td class="px-5 py-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#a9c7ff]/40 text-[#134685] font-body-medium text-[13px] flex items-center justify-center flex-shrink-0 font-semibold">
+                    AS
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-[#001233] leading-snug font-semibold">Andrea Silva</span>
+<span class="font-code-id text-code-id text-[#5C677D]">#PAC-7721</span>
+</div>
+</div>
+</td>
+<td class="px-5 py-2">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-[#33415c] leading-snug">Dra. Mariana Vega</span>
+<span class="font-caption text-caption text-[#5C677D]">Pediatría</span>
+</div>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="font-body-default text-body-default text-[#001233]">12 mar 2026, 11:30</span>
+</td>
+<td class="px-5 py-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF0F8] text-[#33415c] font-caption text-caption">
+                  Consulta general
+                </span>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 h-6 px-2 rounded-full font-badge-label text-badge-label uppercase tracking-wider bg-[#FEF3F2] text-warning border border-[#B54708]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-warning"></span>
+                  Agendada
+                </span>
+</td>
+<td class="px-5 py-2 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Ver detalles" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#0466c8] hover:bg-[#EBF0F8] transition-colors" title="Editar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-danger hover:bg-error-container transition-colors" title="Cancelar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="h-[52px] bg-surface hover:bg-[#F4F6FA] transition-colors">
+<td class="px-5 py-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#0466c8]/10 text-[#0466c8] font-body-medium text-[13px] flex items-center justify-center flex-shrink-0 font-semibold">
+                    MR
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-[#001233] leading-snug font-semibold">Mateo Ramírez</span>
+<span class="font-code-id text-code-id text-[#5C677D]">#PAC-1092</span>
+</div>
+</div>
+</td>
+<td class="px-5 py-2">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-[#33415c] leading-snug">Dr. Jorge Ramos</span>
+<span class="font-caption text-caption text-[#5C677D]">Traumatología</span>
+</div>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="font-body-default text-body-default text-[#001233]">12 mar 2026, 12:45</span>
+</td>
+<td class="px-5 py-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF0F8] text-[#33415c] font-caption text-caption">
+                  Procedimiento
+                </span>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 h-6 px-2 rounded-full font-badge-label text-badge-label uppercase tracking-wider bg-[#FEF3F2] text-warning border border-[#B54708]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-warning"></span>
+                  Agendada
+                </span>
+</td>
+<td class="px-5 py-2 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Ver detalles" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#0466c8] hover:bg-[#EBF0F8] transition-colors" title="Editar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-danger hover:bg-error-container transition-colors" title="Cancelar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="h-[52px] hover:bg-[#F4F6FA] transition-colors">
+<td class="px-5 py-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#d6e3ff] text-[#32507f] font-body-medium text-[13px] flex items-center justify-center flex-shrink-0 font-semibold">
+                    SM
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-[#001233] leading-snug font-semibold">Sofía Morales</span>
+<span class="font-code-id text-code-id text-[#5C677D]">#PAC-5501</span>
+</div>
+</div>
+</td>
+<td class="px-5 py-2">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-[#33415c] leading-snug">Dr. Roberto Sánchez</span>
+<span class="font-caption text-caption text-[#5C677D]">Cardiología</span>
+</div>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="font-body-default text-body-default text-[#001233]">12 mar 2026, 14:00</span>
+</td>
+<td class="px-5 py-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF0F8] text-[#33415c] font-caption text-caption">
+                  Control
+                </span>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 h-6 px-2 rounded-full font-badge-label text-badge-label uppercase tracking-wider bg-[#FEF3F2] text-danger border border-[#D92D20]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-danger"></span>
+                  Cancelada
+                </span>
+</td>
+<td class="px-5 py-2 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Ver detalles" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#0466c8] hover:bg-[#EBF0F8] transition-colors" title="Editar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Reactivar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="h-[52px] bg-surface hover:bg-[#F4F6FA] transition-colors">
+<td class="px-5 py-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#0466c8]/10 text-[#0466c8] font-body-medium text-[13px] flex items-center justify-center flex-shrink-0 font-semibold">
+                    EG
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-[#001233] leading-snug font-semibold">Elena Gómez</span>
+<span class="font-code-id text-code-id text-[#5C677D]">#PAC-3190</span>
+</div>
+</div>
+</td>
+<td class="px-5 py-2">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-[#33415c] leading-snug">Dra. Lucía Valenzuela</span>
+<span class="font-caption text-caption text-[#5C677D]">Medicina General</span>
+</div>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="font-body-default text-body-default text-[#001233]">13 mar 2026, 09:30</span>
+</td>
+<td class="px-5 py-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF0F8] text-[#33415c] font-caption text-caption">
+                  Vacunación
+                </span>
+</td>
+<td class="px-5 py-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 h-6 px-2 rounded-full font-badge-label text-badge-label uppercase tracking-wider bg-[#FEF3F2] text-warning border border-[#B54708]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-warning"></span>
+                  Agendada
+                </span>
+</td>
+<td class="px-5 py-2 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#001845] hover:bg-[#EBF0F8] transition-colors" title="Ver detalles" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-[#0466c8] hover:bg-[#EBF0F8] transition-colors" title="Editar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md text-[#5C677D] hover:text-danger hover:bg-error-container transition-colors" title="Cancelar cita" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-5 py-3 border-t border-[#7D8597]/25 bg-surface">
+<span class="font-body-default text-body-default text-[#5C677D]">
+          Mostrando <strong class="text-[#001845] font-body-medium">1–6</strong> de <strong class="text-[#001845] font-body-medium">24</strong> citas
+        </span>
+<nav aria-label="Paginación" class="flex items-center gap-1">
+<button aria-label="Página anterior" class="w-8 h-8 flex items-center justify-center rounded-lg border border-[#7D8597]/30 bg-surface text-[#5C677D] opacity-40 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-current="page" class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#0466c8] text-white font-body-medium text-body-medium" type="button">
+            1
+          </button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-[#7D8597]/30 bg-surface text-[#001845] hover:bg-[#F4F6FA] font-body-medium text-body-medium transition-colors" type="button">
+            2
+          </button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-[#7D8597]/30 bg-surface text-[#001845] hover:bg-[#F4F6FA] font-body-medium text-body-medium transition-colors" type="button">
+            3
+          </button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-[#7D8597]/30 bg-surface text-[#001845] hover:bg-[#F4F6FA] font-body-medium text-body-medium transition-colors" type="button">
+            4
+          </button>
+<button aria-label="Página siguiente" class="w-8 h-8 flex items-center justify-center rounded-lg border border-[#7D8597]/30 bg-surface text-[#001845] hover:bg-[#F4F6FA] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</div></div></main></div></body></html>
