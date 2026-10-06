@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # Base de Datos (PostgreSQL)
+  postgres:
+    image: postgres:15
+    container_name: clinica-postgres
+    environment:
+      POSTGRES_USER: clinica_user
+      POSTGRES_PASSWORD: clinica_password
+      POSTGRES_DB: clinica_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  # Microservicio de Usuarios
+  user-service:
+    build:
+      context: ./clinica-microservices/user-service
+    container_name: clinica-user-service
+    environment:
+      - PORT=3001
+      - DATABASE_URL=postgresql://clinica_user:clinica_password@postgres:5432/clinica_db?schema=public
+      - JWT_SECRET=super_secret_jwt_key_cambiar_en_produccion
+    ports:
+      - "3001:3001"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  # Microservicio de Citas
+  appointment-service:
+    build:
+      context: ./clinica-microservices/appointment-service
+    container_name: clinica-appointment-service
+    environment:
+      - DATABASE_URL=postgresql://clinica_user:clinica_password@postgres:5432/clinica_db?schema=appointments
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  # API Gateway (Punto de entrada del Backend)
+  api-gateway:
+    build:
+      context: ./clinica-microservices/api-gateway
+    container_name: clinica-api-gateway
+    environment:
+      - PORT=3000
+      - USER_SERVICE_URL=http://user-service:3001
+      - APPOINTMENT_SERVICE_URL=http://appointment-service:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - user-service
+      - appointment-service
+    restart: unless-stopped
+
+  # Frontend (Cliente React + Vite)
+  frontend:
+    build:
+      context: ./FrontEndd-app-INGWEB
+      dockerfile: Dockerfile
+      args:
+        # Se apunta al puerto del host donde el api-gateway está expuesto
+        - VITE_API_URL=http://localhost:3000
+    container_name: clinica-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - api-gateway
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
