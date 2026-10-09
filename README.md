@@ -87,3 +87,35 @@ PRAC-INGWEB/
 ├── stitch_custom_web_page_generator/ # Maquetas y generadores de UI del diseño base
 └── README.md                   # Este archivo
 ```
+
+---
+
+## 🖼️ Previsualización del Diseño (Stitch)
+
+![Previsualización de Maquetas Stitch](./assets/stitch_preview.png)
+
+A continuación, un extracto del contrato de diseño (`design.md`) utilizado para la generación UI:
+
+```markdown
+- **Dominio:** gestión de usuarios y citas médicas en una clínica.
+- **Roles de usuario:** ADMIN, MEDICO, PACIENTE.
+- **Estados de cita:** SCHEDULED, CANCELLED, COMPLETED.
+- **Base de estilos:** CSS puro con tokens (variables CSS + CSS Modules). Sin librerías UI.
+```
+
+## 📋 Plan de Trabajo y Estructura
+
+Para la integración de estas maquetas en el frontend de React, hemos establecido un plan en el documento `PLAN_DE_TRABAJO.md`. La estructura de componentes que seguiremos es:
+
+```text
+src/
+├── api/          # Configuración de Axios
+├── assets/       # Imágenes, iconos
+├── components/   # Componentes UI reutilizables (Botones, Modales, Tablas)
+├── context/      # Estados globales (AuthContext para el JWT y usuario)
+├── hooks/        # Custom hooks de React
+├── layouts/      # Plantillas de vistas (Ej: Layout con Sidebar y Navbar)
+├── pages/        # Vistas principales integradas desde Stitch
+├── services/     # Funciones que usan api/axios.js para llamar al backend
+└── utils/        # Funciones helpers (formateo de fechas, etc.)
+```
