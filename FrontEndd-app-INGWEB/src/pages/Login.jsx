@@ -132,7 +132,7 @@ export default function Login() {
           <div className="w-full h-[1px] bg-border-light/40" />
         </div>
         <div className="relative flex justify-center">
-          <span className="bg-surface px-3 font-caption text-caption text-neutral-muted uppercase">o</span>
+          <span className="bg-background px-3 font-caption text-caption text-neutral-muted uppercase">o</span>
         </div>
       </div>
 

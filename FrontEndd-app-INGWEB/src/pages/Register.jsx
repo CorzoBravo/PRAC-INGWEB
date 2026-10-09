@@ -27,6 +27,10 @@ export default function Register() {
       setFieldErrors({ confirm: "Las contraseñas no coinciden" });
       return;
     }
+    if (password.length < 6) {
+      setFieldErrors({ password: "La contraseña debe tener al menos 6 caracteres" });
+      return;
+    }
     setFieldErrors({});
     setLoading(true);
     try {
