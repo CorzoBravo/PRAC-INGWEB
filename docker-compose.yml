@@ -37,6 +37,7 @@ services:
     container_name: clinica-appointment-service
     environment:
       - DATABASE_URL=postgresql://clinica_user:clinica_password@postgres:5432/clinica_db?schema=appointments
+      - JWT_SECRET=super_secret_jwt_key_cambiar_en_produccion
     ports:
       - "8000:8000"
     depends_on:
@@ -66,7 +67,7 @@ services:
       dockerfile: Dockerfile
       args:
         # Se apunta al puerto del host donde el api-gateway está expuesto
-        - VITE_API_URL=http://localhost:3000
+        - VITE_API_URL=http://localhost:3000/api
     container_name: clinica-frontend
     ports:
       - "5173:80"
