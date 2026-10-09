@@ -1,11 +1,10 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import AppLayout from "../components/layout/AppLayout";
 
 export default function NewAppointment() {
-  const navigate = useNavigate();
   return (
     <>
-      <aside className="fixed left-0 top-0 h-screen w-64 bg-surface border-r border-[#E2E8F0] z-50 flex flex-col justify-between overflow-y-auto"><div className="flex flex-col"><div className="h-16 flex items-center gap-3 px-space-lg border-b border-[#E2E8F0]"><img alt="Sistema Clinicas Logo" className="h-8 w-auto object-contain rounded" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/><span className="font-brand-title text-brand-title text-midnight-navy font-semibold">Sistema Clinicas</span></div><nav className="flex flex-col gap-6 py-space-lg" data-active-classes="bg-[#ebf3fc] text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]"><div className="flex flex-col gap-1"><span className="px-space-lg font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider mb-space-xs">Principal</span><Link to="/dashboard"  className="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">grid_view</span><span className="font-body-default text-body-default">Resumen</span></Link><Link to="/appointments"  className="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">calendar_today</span><span className="font-body-default text-body-default">Citas</span></Link><Link to="/appointments/new"  aria-current="page" className="flex items-center gap-3 px-space-lg py-2.5 transition-colors bg-[#ebf3fc] text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]" ><span className="material-symbols-outlined text-[20px]">event_available</span><span className="font-body-default text-body-default">Nueva cita</span></Link></div><div className="flex flex-col gap-1"><span className="px-space-lg font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider mb-space-xs">Gestión</span><Link to="/admin/users"  className="flex items-center justify-between px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" ><div className="flex items-center gap-3"><span className="material-symbols-outlined text-[20px]">group</span><span className="font-body-default text-body-default">Usuarios</span></div><span className="px-2 py-0.5 rounded-full bg-[#e8eeff] font-badge-label text-badge-label text-slate-label">12</span></Link><Link to="#"  className="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">settings</span><span className="font-body-default text-body-default">Configuración</span></Link></div><div className="flex flex-col gap-1"><span className="px-space-lg font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider mb-space-xs">Cuenta</span><Link to="#"  className="flex items-center gap-3 px-space-lg py-2.5 text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">person</span><span className="font-body-default text-body-default">Mi perfil</span></Link></div></nav></div><div className="p-space-md border-t border-[#E2E8F0] flex flex-col gap-3"><div className="bg-[#f4f6fa] rounded-lg border border-[#E2E8F0] p-3 flex flex-col gap-1"><div className="flex items-center justify-between"><span className="font-body-medium text-body-medium text-midnight-navy">Operador</span><span className="px-2 py-0.5 rounded-full bg-[#ebf3fc] font-badge-label text-badge-label text-[#0466c8] font-semibold">ADMIN</span></div><span className="font-code-id text-code-id text-neutral-muted truncate">admin@clinicas.com</span></div><Link to="/login"  className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-danger hover:bg-error-container hover:text-on-error-container transition-colors" ><span className="material-symbols-outlined text-[20px]">logout</span><span className="font-body-medium text-body-medium">Cerrar sesión</span></Link></div></aside><div className="pl-64"><header className="fixed top-0 left-64 right-0 h-16 bg-surface border-b border-[#E2E8F0] z-40 flex items-center justify-between px-space-lg"><div className="flex items-center gap-4"><img alt="Sistema Clinicas Logo" className="h-8 w-auto object-contain md:hidden" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/></div><div className="flex items-center gap-4"><div className="relative w-[280px]"><span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-neutral-muted">search</span><input className="w-full h-10 pl-9 pr-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-midnight-navy placeholder:text-neutral-muted focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 transition-colors" placeholder="Buscar paciente o mém�dico..." type="text"/></div><button aria-label="Notificaciones" className="relative p-2 rounded-lg text-slate-label hover:bg-[#f4f6fa] hover:text-midnight-navy transition-colors" type="button"><span className="material-symbols-outlined text-[22px]">notifications</span><span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#0466c8]"></span></button><div className="h-6 w-px bg-[#E2E8F0]"></div><div className="flex items-center gap-3 pl-1"><img alt="Profile" className="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2kgAIbiYdtWPvyoHHOJHl20AVVTXIsietzZzQ53xt6My-CqNpySok17eeHP21X-ySSWl3mDV_Jn0nCNRxePc81AtpGdwOVfg-bRBy1n5fLIa�oK2nQOAfHIuc3O9zE76RC1VNvyRpWRQjOb2ws1RpG837P8sozSCP2hkDauBU9rzRn4QEmoMXg9V9okgZMO23UFz4h_B8B5XJQ-MTVk3F8vqa9hs1JURWhUjeMV0Xa_8ErakVt_OHdkg"/><div className="hidden sm:flex flex-col text-left"><span className="font-body-medium text-body-medium text-midnight-navy leading-tight">Dra. Lucía Valenzuela</span><span className="font-caption text-caption text-neutral-muted leading-tight">Administradora</span></div><span className="material-symbols-outlined text-neutral-muted text-[18px]">expand_more</span></div></div></header><main className="w-full pt-16 min-h-screen bg-background"><div className="max-w-[1280px] mx-auto p-space-lg"><div className="flex flex-col w-full">
+      <AppLayout><main className="w-full pt-16 min-h-screen bg-background"><div className="max-w-[1280px] mx-auto p-space-lg"><div className="flex flex-col w-full">
 
 <div className="flex flex-col gap-2 mb-space-lg">
 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-neutral-muted font-body-default text-body-default">
@@ -18,7 +17,7 @@ export default function NewAppointment() {
 </nav>
 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 <div>
-<h1 className="font-headline-page text-headline-page text-midnight-navy">Nueva cita mém�dica</h1>
+<h1 className="font-headline-page text-headline-page text-midnight-navy">Nueva cita médica</h1>
 <p className="font-body-default text-body-default text-neutral-muted mt-0.5">Programa una nueva consulta para un paciente</p>
 </div>
 <div className="flex items-center gap-3">
@@ -36,7 +35,7 @@ export default function NewAppointment() {
 <header className="flex flex-col gap-1 pb-space-md border-b border-[#E2E8F0] mb-6">
 <div className="flex items-center justify-between">
 <h2 className="font-title-modal text-title-modal text-darkest-slate flex items-center gap-2">
-<span className="material-symbols-outlined text-[#0466c8] text-[22px]">mem�dical_services</span>
+<span className="material-symbols-outlined text-[#0466c8] text-[22px]">medical_services</span>
             Datos de la consulta
           </h2>
 <span className="font-caption text-caption text-neutral-muted">* Campos obligatorios</span>
@@ -50,7 +49,7 @@ export default function NewAppointment() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 <div className="flex flex-col gap-1.5">
 <label className="font-body-medium text-body-medium text-slate-label flex items-center gap-1" htmlFor="doctorSelect">
-              Mém�dico tratante <span className="text-danger">*</span>
+              Médico tratante <span className="text-danger">*</span>
 </label>
 <div className="relative">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-muted text-[20px] pointer-events-none">stethoscope</span>
@@ -141,11 +140,11 @@ export default function NewAppointment() {
 <span className="font-caption text-caption text-neutral-muted">Opcional</span>
 </div>
 <div className="relative">
-<textarea className="w-full p-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate placeholder:text-neutral-muted focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 resize-none transition-colors" id="consultationReason" maxlength="500" placeholder="Describe brevemente los síntomas o razón del control mém�dico..." rows="4">Revisión perióm�dica de arritmia benigna diagnosticada en control de enero. Evaluación de electrocardiograma reciente.</textarea>
+<textarea className="w-full p-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-darkest-slate placeholder:text-neutral-muted focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 resize-none transition-colors" id="consultationReason" maxlength="500" placeholder="Describe brevemente los síntomas o razón del control médico..." rows="4">Revisión periódica de arritmia benigna diagnosticada en control de enero. Evaluación de electrocardiograma reciente.</textarea>
 </div>
 <div className="flex items-center justify-between mt-1">
 <span className="font-caption text-caption text-neutral-muted flex items-center gap-1">
-<span className="material-symbols-outlined text-[16px]">info</span> Incluye inm�dicaciones previas si aplica
+<span className="material-symbols-outlined text-[16px]">info</span> Incluye indicaciones previas si aplica
             </span>
 <span className="font-code-id text-code-id text-neutral-muted" id="charCounter">48 / 500</span>
 </div>
@@ -198,13 +197,13 @@ export default function NewAppointment() {
           </span>
 </div>
 <p className="font-caption text-caption text-neutral-muted mb-5">
-          Comprueba la concordancia de los datos antes de emitir la orden mém�dica de atención.
+          Comprueba la concordancia de los datos antes de emitir la orden médica de atención.
         </p>
 
 <div className="flex flex-col gap-3.5 bg-surface/90 rounded-lg p-4 border border-[#0466c8]/15 shadow-sm">
 
 <div className="flex flex-col gap-0.5">
-<span className="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Mém�dico</span>
+<span className="font-badge-label text-badge-label text-neutral-muted uppercase tracking-wider">Médico</span>
 <div className="flex items-start gap-2 mt-0.5">
 <span className="material-symbols-outlined text-[#0466c8] text-[18px] mt-0.5">person</span>
 <div className="flex flex-col">
@@ -300,7 +299,7 @@ export default function NewAppointment() {
 </button>
 </div>
 </div>
-</div></main></div>
+</div></main></AppLayout>
     </>
   );
 }

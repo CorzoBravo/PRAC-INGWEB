@@ -1,16 +1,14 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import AppLayout from "../components/layout/AppLayout";
 
 export default function Appointments() {
-  const navigate = useNavigate();
   return (
     <>
-      <aside className="fixed left-0 top-0 h-screen w-64 bg-surface border-r border-[#979DAC]/30 z-50 flex flex-col justify-between overflow-y-auto"><div className="flex flex-col"><div className="h-16 flex items-center gap-3 px-space-lg border-b border-[#979DAC]/30"><img alt="Sistema Clinicas Logo" className="h-8 w-auto object-contain rounded" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/><span className="font-title-section text-[15px] font-semibold text-[#001845]">Sistema Clinicas</span></div><nav className="flex flex-col gap-6 py-space-lg" data-active-classes="bg-[#0466c8]/10 text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]"><div className="flex flex-col gap-1"><span className="px-space-lg font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider mb-space-xs">Principal</span><Link to="/dashboard"  className="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">grid_view</span><span className="font-body-default text-body-default">Resumen</span></Link><Link to="/appointments"  aria-current="page" className="flex items-center gap-3 px-space-lg py-2.5 transition-colors bg-[#0466c8]/10 text-[#0466c8] font-body-medium border-l-[3px] border-[#0466c8]" ><span className="material-symbols-outlined text-[20px] text-[#0466c8]">calendar_today</span><span className="font-body-default text-body-default">Citas</span></Link><Link to="/appointments/new"  className="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">event_available</span><span className="font-body-default text-body-default">Nueva cita</span></Link></div><div className="flex flex-col gap-1"><span className="px-space-lg font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider mb-space-xs">Gestión</span><Link to="/admin/users"  className="flex items-center justify-between px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" ><div className="flex items-center gap-3"><span className="material-symbols-outlined text-[20px]">group</span><span className="font-body-default text-body-default">Usuarios</span></div><span className="px-2 py-0.5 rounded-full bg-[#EBF0F8] font-badge-label text-badge-label text-[#33415c]">12</span></Link><Link to="#"  className="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">settings</span><span className="font-body-default text-body-default">Configuración</span></Link></div><div className="flex flex-col gap-1"><span className="px-space-lg font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider mb-space-xs">Cuenta</span><Link to="#"  className="flex items-center gap-3 px-space-lg py-2.5 text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors border-l-[3px] border-transparent" ><span className="material-symbols-outlined text-[20px]">person</span><span className="font-body-default text-body-default">Mi perfil</span></Link></div></nav></div><div className="p-space-md border-t border-[#979DAC]/30 flex flex-col gap-3"><div className="bg-[#F4F6FA] rounded-lg border border-[#979DAC]/30 p-3 flex flex-col gap-1"><div className="flex items-center justify-between"><span className="font-body-medium text-body-medium text-[#001845]">Operador</span><span className="px-2 py-0.5 rounded-full bg-[#0466c8]/10 font-badge-label text-badge-label text-[#0466c8]">ADMIN</span></div><span className="font-code-id text-code-id text-[#5C677D] truncate">admin@clinicas.com</span></div><Link to="/login"  className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-danger hover:bg-error-container hover:text-on-error-container transition-colors" ><span className="material-symbols-outlined text-[20px]">logout</span><span className="font-body-medium text-body-medium">Cerrar sesión</span></Link></div></aside><div className="pl-64"><header className="fixed top-0 left-64 right-0 h-16 bg-surface border-b border-[#979DAC]/30 z-40 flex items-center justify-between px-space-lg"><div className="flex items-center gap-4"><img alt="Sistema Clinicas Logo" className="h-8 w-auto object-contain md:hidden" src="https://lh3.googleusercontent.com/aida/AEtjO1Wr25McdkOxWD2vzGzyR0l2Brhp-1S3jIH5x-dOxKoiU4H6BImGxuTnfuQWsdVr917lzupvBT530d-RIUMtTGE1aFfHsdg1O-c9R3rg7MFqPnLz8gHUOlTETEsg2kD45dC3m7a8pG4tWBtFHQnDW9ktRILBcU4S9JRHLNTzZtw6aF3cDJINTlXFkkzIfGpBRLPcNTySEbQIhibPP7Q6w1yFxNU8YdIkF8Ubt4v5GGbGqzMh67pSt5-yd04n"/></div><div className="flex items-center gap-4"><div className="relative w-[280px]"><span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[20px] text-[#5C677D]">search</span><input className="w-full h-10 pl-9 pr-3 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] placeholder:text-[#5C677D] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20" placeholder="Buscar paciente o mém�dico..." type="text"/></div><button aria-label="Notificaciones" className="relative p-2 rounded-lg text-[#5C677D] hover:bg-[#F4F6FA] hover:text-[#001845] transition-colors" type="button"><span className="material-symbols-outlined text-[22px]">notifications</span><span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#0466c8]"></span></button><div className="h-6 w-px bg-[#979DAC]/30"></div><div className="flex items-center gap-3 pl-1"><img alt="Profile" className="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2kgAIbiYdtWPvyoHHOJHl20AVVTXIsietzZzQ53xt6My-CqNpySok17eeHP21X-ySSWl3mDV_Jn0nCNRxePc81AtpGdwOVfg-bRBy1n5fLIa�oK2nQOAfHIuc3O9zE76RC1VNvyRpWRQjOb2ws1RpG837P8sozSCP2hkDauBU9rzRn4QEmoMXg9V9okgZMO23UFz4h_B8B5XJQ-MTVk3F8vqa9hs1JURWhUjeMV0Xa_8ErakVt_OHdkg"/><div className="hidden sm:flex flex-col text-left"><span className="font-body-medium text-body-medium text-[#001845] leading-tight">Dra. Lucía Valenzuela</span><span className="font-caption text-caption text-[#5C677D] leading-tight">Administradora</span></div><span className="material-symbols-outlined text-[#5C677D] text-[18px]">expand_more</span></div></div></header><main className="w-full pt-16 min-h-screen bg-[#f4f6fa]"><div className="max-w-[1280px] mx-auto p-space-lg"><div className="flex flex-col w-full">
+      <AppLayout><main className="w-full pt-16 min-h-screen bg-[#f4f6fa]"><div className="max-w-[1280px] mx-auto p-space-lg"><div className="flex flex-col w-full">
 <div className="flex flex-col gap-6">
 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 <div className="flex flex-col gap-1">
 <h1 className="font-headline-page text-headline-page text-[#001845]">Citas</h1>
-<p className="font-body-default text-body-default text-[#5C677D]">Gestiona y da seguimiento a las consultas mém�m�dicas</p>
+<p className="font-body-default text-body-default text-[#5C677D]">Gestiona y da seguimiento a las consultas médicas</p>
 </div>
 <div className="flex items-center gap-3">
 <button className="h-10 px-4 rounded-lg bg-surface border border-[#7D8597]/40 text-[#001845] hover:bg-[#F4F6FA] font-body-medium text-body-medium flex items-center gap-2 transition-colors" type="button">
@@ -51,10 +49,10 @@ export default function Appointments() {
 </div>
 </div>
 <div className="lg:col-span-3 flex flex-col gap-1.5">
-<label className="font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider">Mém�dico</label>
+<label className="font-badge-label text-badge-label text-[#5C677D] uppercase tracking-wider">Médico</label>
 <div className="relative">
 <select className="w-full h-10 pl-3 pr-8 rounded-lg border border-[#7D8597]/40 bg-surface text-body-default font-body-default text-[#001233] focus:outline-none focus:border-[#0466c8] focus:ring-2 focus:ring-[#0466c8]/20 appearance-none cursor-pointer">
-<option value="todos">Todos los mém�dicos</option>
+<option value="todos">Todos los médicos</option>
 <option value="roberto">Dr. Roberto Sánchez (Cardiología)</option>
 <option value="lucia">Dra. Lucía Valenzuela (Med. General)</option>
 <option value="mariana">Dra. Mariana Vega (Pediatría)</option>
@@ -116,7 +114,7 @@ export default function Appointments() {
 <thead>
 <tr className="h-10 bg-[#F4F6FA] border-b border-[#7D8597]/25">
 <th className="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Paciente</th>
-<th className="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Mém�dico</th>
+<th className="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Médico</th>
 <th className="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Fecha y Hora</th>
 <th className="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Tipo de Consulta</th>
 <th className="px-5 font-table-header text-table-header text-[#33415c] uppercase tracking-wider" scope="col">Estado</th>
@@ -430,7 +428,7 @@ export default function Appointments() {
 </div>
 </div>
 </div>
-</div></div></main></div>
+</div></div></main></AppLayout>
     </>
   );
 }

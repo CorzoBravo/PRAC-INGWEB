@@ -60,18 +60,18 @@
   --color-secondary-fixed: #d6e3ff;
   --color-surface-variant: #d7e2ff;
   --color-on-surface-variant: #33415c;
-  --font-caption: "Roboto Flex";
-  --font-body-default: "Roboto Flex";
-  --font-title-section: "Roboto Flex";
-  --font-headline-page-mobile: "Roboto Flex";
-  --font-body-medium: "Roboto Flex";
-  --font-table-header: "Roboto Flex";
-  --font-code-id: monospace;
-  --font-title-modal: "Roboto Flex";
-  --font-badge-label: "Roboto Flex";
-  --font-title-card: "Roboto Flex";
-  --font-headline-page: "Roboto Flex";
-  --font-headline-hero: "Roboto Flex";
+  --font-caption: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body-default: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-title-section: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-headline-page-mobile: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body-medium: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-table-header: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-code-id: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-title-modal: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-badge-label: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-title-card: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-headline-page: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-headline-hero: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --spacing-gutter-mobile: 0.75rem;
   --spacing-gutter: 1.5rem;
   --spacing-space-lg: 1.5rem;
@@ -89,6 +89,8 @@
 
 @layer base {
   html,body{margin:0;padding:0;}
+  body{font-family:"Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;color:var(--color-on-surface);background:var(--color-background);-webkit-font-smoothing:antialiased;}
+  :focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;}
   body{overscroll-behavior:none;}
   main > :first-child{margin-top:0!important;}
   main > :last-child{margin-bottom:0!important;}
