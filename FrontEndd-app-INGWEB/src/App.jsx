@@ -16,13 +16,13 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/registro" element={<Register />} />
 
+      {/* Rutas accesibles por todos los roles autenticados */}
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/appointments" element={<ProtectedRoute><Appointments /></ProtectedRoute>} />
-      <Route
-        path="/appointments/new"
-        element={<ProtectedRoute roles={["ADMIN", "MEDICO"]}><NewAppointment /></ProtectedRoute>}
-      />
+      <Route path="/appointments/new" element={<ProtectedRoute><NewAppointment /></ProtectedRoute>} />
       <Route path="/appointments/:id" element={<ProtectedRoute><AppointmentDetail /></ProtectedRoute>} />
+
+      {/* Rutas protegidas exclusivas para ADMINISTRADOR */}
       <Route path="/admin/users" element={<ProtectedRoute roles={["ADMIN"]}><AdminUsers /></ProtectedRoute>} />
 
       <Route path="*" element={<NotFound />} />

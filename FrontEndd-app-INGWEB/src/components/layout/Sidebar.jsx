@@ -11,22 +11,21 @@ const SECTIONS = [
       {
         to: "/appointments",
         icon: "calendar_today",
-        label: "Citas",
+        label: "Mis Citas",
         match: (p) => p.startsWith("/appointments") && p !== "/appointments/new",
       },
       {
         to: "/appointments/new",
         icon: "event_available",
-        label: "Nueva cita",
-        roles: ["ADMIN", "MEDICO"],
+        label: "Agendar Cita",
         match: (p) => p === "/appointments/new",
       },
     ],
   },
   {
-    title: "Gestión",
+    title: "Gestión Administrativa",
     roles: ["ADMIN"],
-    items: [{ to: "/admin/users", icon: "group", label: "Usuarios", match: (p) => p.startsWith("/admin/users") }],
+    items: [{ to: "/admin/users", icon: "group", label: "Gestión de Usuarios", match: (p) => p.startsWith("/admin/users") }],
   },
 ];
 
@@ -101,15 +100,14 @@ export default function Sidebar({ open, onClose }) {
               {user?.email}
             </span>
           </div>
+
           <button
             type="button"
             onClick={logout}
-            className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-red-300 hover:bg-white/5 hover:text-red-200 transition-colors"
+            className="flex items-center gap-2 px-3 py-2 text-sidebar-text hover:text-white hover:bg-white/5 rounded-lg transition-colors font-body-medium text-body-medium"
           >
-            <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-              logout
-            </span>
-            <span className="font-body-medium text-body-medium">Cerrar sesión</span>
+            <span className="material-symbols-outlined text-[18px]">logout</span>
+            <span>Cerrar sesión</span>
           </button>
         </div>
       </aside>
