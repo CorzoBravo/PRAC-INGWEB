@@ -1,50 +1,58 @@
-version: '3.8'
-
 services:
-  # Base de Datos (PostgreSQL)
+  # ==========================================
+  # 1. Base de Datos Central (PostgreSQL 15)
+  # ==========================================
   postgres:
     image: postgres:15
     container_name: clinica-postgres
     environment:
-      POSTGRES_USER: clinica_user
-      POSTGRES_PASSWORD: clinica_password
-      POSTGRES_DB: clinica_db
+      POSTGRES_USER: ${POSTGRES_USER:-clinica_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-clinica_password}
+      POSTGRES_DB: ${POSTGRES_DB:-clinica_db}
+    # Puerto 5432 expuesto al host para administración con DBeaver/pgAdmin
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
-  # Microservicio de Usuarios
+  # ==========================================
+  # 2. Microservicio de Usuarios y Autenticación
+  # ==========================================
   user-service:
     build:
       context: ./clinica-microservices/user-service
     container_name: clinica-user-service
     environment:
       - PORT=3001
-      - DATABASE_URL=postgresql://clinica_user:clinica_password@postgres:5432/clinica_db?schema=public
-      - JWT_SECRET=super_secret_jwt_key_cambiar_en_produccion
-    ports:
-      - "3001:3001"
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-clinica_user}:${POSTGRES_PASSWORD:-clinica_password}@postgres:5432/${POSTGRES_DB:-clinica_db}?schema=public
+      - JWT_SECRET=${JWT_SECRET:-clinica_jwt_secret_key_change_in_production_2026_super_secure}
+      - NODE_ENV=${NODE_ENV:-production}
+    # Puerto interno: Solo accesible dentro de la red interna de Docker a través del API Gateway
     depends_on:
       - postgres
     restart: unless-stopped
 
-  # Microservicio de Citas
+  # ==========================================
+  # 3. Microservicio de Citas Médicas
+  # ==========================================
   appointment-service:
     build:
       context: ./clinica-microservices/appointment-service
     container_name: clinica-appointment-service
     environment:
-      - DATABASE_URL=postgresql://clinica_user:clinica_password@postgres:5432/clinica_db?schema=appointments
-      - JWT_SECRET=super_secret_jwt_key_cambiar_en_produccion
-    ports:
-      - "8000:8000"
+      - PORT=8000
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-clinica_user}:${POSTGRES_PASSWORD:-clinica_password}@postgres:5432/${POSTGRES_DB:-clinica_db}?schema=appointments
+      - JWT_SECRET=${JWT_SECRET:-clinica_jwt_secret_key_change_in_production_2026_super_secure}
+      - NODE_ENV=${NODE_ENV:-production}
+    # Puerto interno: Solo accesible a través del API Gateway
     depends_on:
       - postgres
     restart: unless-stopped
 
-  # API Gateway (Punto de entrada del Backend)
+  # ==========================================
+  # 4. API Gateway (Borde de Entrada / Proxy Inverso)
+  # ==========================================
   api-gateway:
     build:
       context: ./clinica-microservices/api-gateway
@@ -53,6 +61,7 @@ services:
       - PORT=3000
       - USER_SERVICE_URL=http://user-service:3001
       - APPOINTMENT_SERVICE_URL=http://appointment-service:8000
+      - NODE_ENV=${NODE_ENV:-production}
     ports:
       - "3000:3000"
     depends_on:
@@ -60,14 +69,15 @@ services:
       - appointment-service
     restart: unless-stopped
 
-  # Frontend (Cliente React + Vite)
+  # ==========================================
+  # 5. Frontend (React + Vite + Nginx)
+  # ==========================================
   frontend:
     build:
       context: ./FrontEndd-app-INGWEB
       dockerfile: Dockerfile
       args:
-        # Se apunta al puerto del host donde el api-gateway está expuesto
-        - VITE_API_URL=http://localhost:3000/api
+        - VITE_API_URL=${VITE_API_URL:-http://localhost:3000/api}
     container_name: clinica-frontend
     ports:
       - "5173:80"
